@@ -3,7 +3,7 @@ import os, pygame
 FPS = 60
 DIFFICULTY = 1
 NEON = True
-VOLUME = 1.0
+VOLUME = 1
 HIGHSCORE = 0
 
 sounds = {}
@@ -16,14 +16,14 @@ sounds["TRIANGLE"] = pygame.mixer.Sound(os.path.join("assets", "sounds", "triang
 sounds["SQUARE"] = pygame.mixer.Sound(os.path.join("assets", "sounds", "square.wav"))
 sounds["CIRCLE"] = pygame.mixer.Sound(os.path.join("assets", "sounds", "circle.wav"))
 sounds["LASER"] = pygame.mixer.Sound(os.path.join("assets", "sounds", "laser.mp3"))
-sounds["SETTINGS"].set_volume(0.1)
-sounds["SETTING_CHANGE"].set_volume(0.2)
-sounds["OPEN"].set_volume(0.05)
-sounds["DEATH"].set_volume(0.1)
-sounds["TRIANGLE"].set_volume(0.1)
-sounds["SQUARE"].set_volume(0.1)
-sounds["CIRCLE"].set_volume(0.1)
-sounds["LASER"].set_volume(0.018)
+sounds["SETTINGS"].set_volume(VOLUME/10)
+sounds["SETTING_CHANGE"].set_volume(VOLUME/10)
+sounds["OPEN"].set_volume(VOLUME/10)
+sounds["DEATH"].set_volume(VOLUME/10)
+sounds["TRIANGLE"].set_volume(VOLUME/10)
+sounds["SQUARE"].set_volume(VOLUME/10)
+sounds["CIRCLE"].set_volume(VOLUME/10)
+sounds["LASER"].set_volume(0)
 
 
 def loadSettings():
@@ -38,7 +38,7 @@ def loadSettings():
         NEON = False
     else:
         NEON = True
-    VOLUME = float(lines[3])
+    VOLUME = int(lines[3])
     HIGHSCORE = int(lines[4])
     file.close()
 

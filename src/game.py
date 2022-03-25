@@ -88,11 +88,14 @@ class Game:
                         self.player.pos = [self.displaysurf.get_width() / 2, self.displaysurf.get_height() / 2]
         elif self.currentOption == 2:
             if inc:
-                if settings.VOLUME < 1.0:
-                    settings.VOLUME += 0.1
+                if settings.VOLUME < 10:
+                    settings.VOLUME += 1
             else:
                 if settings.VOLUME > 0:
-                    settings.VOLUME -= 0.1
+                    settings.VOLUME -= 1
+            for i in settings.sounds.keys():
+                if i != "LASER":
+                    settings.sounds[i].set_volume(settings.VOLUME/10)
         elif self.currentOption == 3:
             if inc:
                 settings.FPS += 1
