@@ -92,5 +92,6 @@
 |------------------------------CONTACT-----------------------------------|
 |                                                                        |
 | Reach out to me on Discord to report bugs or just chat (Blueish#4256)  |
-| Entwined's Github page:
+| Entwined's Github page: https://github.com/BIueish/Entwined            |
+| Itch.io: https://blulogic.itch.io/entwined                             |
 \________________________________________________________________________/
