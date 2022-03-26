@@ -15,6 +15,7 @@ class Game:
     def __init__(self):
         settings.loadSettings()
         pygame.display.set_caption("Entwined")
+        pygame.display.set_icon(pygame.image.load(os.path.join("assets", "icon.png")))
         self.displaysurf = pygame.display.set_mode((600, 600), pygame.RESIZABLE | pygame.SRCALPHA, 32)
         self.player = Player([self.displaysurf.get_width()/2, self.displaysurf.get_height()/2], 0)
         self.clock = pygame.time.Clock()
